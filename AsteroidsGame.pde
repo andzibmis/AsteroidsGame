@@ -1,6 +1,7 @@
 Spaceship space = new Spaceship ();
-Star [] backg = new Star [300];
+Star [] backg = new Star [500];
 ArrayList <Asteroid> ne = new ArrayList <Asteroid> ();
+Bullet bu = new Bullet ();
 
 public void setup()  {
 	size (500, 500);
@@ -11,6 +12,7 @@ public void setup()  {
 	for (int x = 0; x < 10; x++) {
 		ne.add (x, new Asteroid ());
 	}
+	
 }
 public void draw() {
 	background (0);
@@ -24,8 +26,14 @@ public void draw() {
 	}
 	space.show ();
 	space.move ();
-
-	space.info ();
+    space.info();
+    if (mousePressed) {
+    	bu.move();
+    	bu.accelerate (0.01);
+    }
+    bu.show();
+    bu.info();
+    
 }
 
 public void keyPressed () {

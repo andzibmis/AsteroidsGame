@@ -19,4 +19,13 @@ class Asteroid extends Floater {
 		myCenterX = myCenterX - speed;
 		myCenterY = myCenterY - speed;
 	}
+	public double gMyCenterX () {
+		return myCenterX;
+	}
+	public double gMyCenterY () {
+		return myCenterY;
+	}
+	public void removeS () {
+		ne.remove (1);
+	}
 }
